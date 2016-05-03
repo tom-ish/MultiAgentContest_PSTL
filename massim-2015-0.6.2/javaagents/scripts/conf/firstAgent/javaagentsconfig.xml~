@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<javaAgentsConfig verbose="no">
-  <agents>
-    <agent name="agentA1" entity="cA1" class="massim.javaagents.agents.SimpleDebugActionAgent" team="A"/>
-    <agent name="agentB1" entity="cB1" class="massim.javaagents.agents.SimpleCarAgent" team="B"/>
-    
-  </agents>
-</javaAgentsConfig>

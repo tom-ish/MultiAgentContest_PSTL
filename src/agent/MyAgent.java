@@ -1,7 +1,15 @@
 package agent;
 
+import java.util.LinkedList;
+
+import org.jdesktop.application.Action.Parameter;
+
+import eis.EIDefaultImpl;
+import eis.EILoader;
 import eis.iilang.Action;
 import eis.iilang.Percept;
+import massim.competition2015.monitor.data.AgentInfo;
+import massim.eismassim.EnvironmentInterface;
 import massim.javaagents.Agent;
 
 public class MyAgent extends Agent {
@@ -19,8 +27,10 @@ public class MyAgent extends Agent {
 
 	@Override
 	public Action step() {
-		// TODO deliberate and return an action
-		return null;
+		// TODO deliberate and Parameter action
+		LinkedList<Parameter> parametres = new LinkedList<Parameter>();
+		parametres.add();
+		return new Action("goto",);
 	}
 
 }

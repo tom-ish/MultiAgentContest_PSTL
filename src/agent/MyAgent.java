@@ -8,18 +8,18 @@ public class MyAgent extends Agent {
 
 	public MyAgent(String name, String team) {
 		super(name, team);
-		// TODO Auto-generated constructor stub
+		// TODO do something if necessary
 	}
 
 	@Override
 	public void handlePercept(Percept arg0) {
-		// TODO Auto-generated method stub
+		// TODO handle percepts if necessary
 		
 	}
 
 	@Override
 	public Action step() {
-		// TODO Auto-generated method stub
+		// TODO deliberate and return an action
 		return null;
 	}
 

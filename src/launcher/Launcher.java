@@ -63,6 +63,7 @@ public class Launcher {
 		 */
 		try {
 			Collection<Percept> ret = getAllPercepts(getName());
+			Percept p = new Percept("");
 		}
 		catch (PerceiveException e) {
 			

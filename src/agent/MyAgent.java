@@ -28,9 +28,7 @@ public class MyAgent extends Agent {
 	@Override
 	public Action step() {
 		// TODO deliberate and Parameter action
-		LinkedList<Parameter> parametres = new LinkedList<Parameter>();
-		parametres.add();
-		return new Action("goto",);
+		return ActionUtils.gotoAction();
 	}
 
 }

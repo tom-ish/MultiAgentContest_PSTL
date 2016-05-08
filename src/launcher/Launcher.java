@@ -12,6 +12,7 @@ import eis.exceptions.NoEnvironmentException;
 import eis.exceptions.PerceiveException;
 import eis.exceptions.RelationException;
 import eis.iilang.Action;
+import eis.iilang.Parameter;
 import eis.iilang.Percept;
 
 public class Launcher {
@@ -61,16 +62,17 @@ public class Launcher {
 		/*
 		 * 5). Perceiving the environment
 		 */
-		try {
-			Collection<Percept> ret = getAllPercepts(getName());
-			Percept p = new Percept("");
-		}
-		catch (PerceiveException e) {
-			
-		}
-		catch (NoEnvironmentException e) {
-			
-		}
+//		try {
+//			
+//			Collection<Percept> ret = getAllPercepts();
+//			Percept p = new Percept("");
+//		}
+//		catch (PerceiveException e) {
+//			
+//		}
+//		catch (NoEnvironmentException e) {
+//			
+//		}
 		
 		/*
 		 * 7). Acting

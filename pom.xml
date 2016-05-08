@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>massim</groupId>
-  <artifactId>eismassim</artifactId>
-  <version>2.7</version>
+  <artifactId>javaagents</artifactId>
+  <version>2.2</version>
   <packaging>jar</packaging>
 
-  <name>EISMASSim</name>
+  <name>JAVA Agents</name>
   <url>http://multiagentcontest.org</url>
 
   <properties>
@@ -25,6 +25,16 @@
       <groupId>apleis</groupId>
       <artifactId>eis</artifactId>
       <version>0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>apltkgroup</groupId>
+      <artifactId>apltk</artifactId>
+      <version>0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>massim</groupId>
+      <artifactId>eismassim</artifactId>
+      <version>2.6</version>
     </dependency>
   </dependencies>
 
@@ -45,13 +55,14 @@
         <version>2.2</version>
         <configuration>
           <archive>
-            <manifestEntries>
-              <Main-Class>massim.eismassim.EnvironmentInterface</Main-Class>
-            </manifestEntries>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>dependency/</classpathPrefix>
+              <mainClass>massim.javaagents.App</mainClass>
+            </manifest>
           </archive>
         </configuration>
       </plugin>
-
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
@@ -65,21 +76,20 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-source-plugin</artifactId>
-	<version>2.2.1</version>
+        <artifactId>maven-source-plugin</artifactId>
+	<version>2.1.1</version>
         <executions>
           <execution>
             <id>attach-sources</id>
             <goals>
-              <goal>jar-no-fork</goal>
+              <goal>jar</goal>
             </goals>
           </execution>
-        </executions>
+	  </executions>
 	  <configuration>
 		<includePom>true</includePom>
 	  </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-javadoc-plugin</artifactId>
@@ -100,20 +110,6 @@
         </executions>
       </plugin>
     </plugins>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-         <artifactId>wagon-ssh-external</artifactId>
-         <version>1.0-beta-6</version>
-      </extension>
-    </extensions>
   </build>
-
-  <!--distributionManagement>
-    <repository>
-      <id>multiagentcontest.org</id>
-      <url>scpexe://vz102.in.tu-clausthal.de:222/var/www/html/joomla/maven</url>
-    </repository>
-  </distributionManagement-->
 
 </project>

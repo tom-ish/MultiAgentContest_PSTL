@@ -20,8 +20,10 @@ public class MyAgent extends Agent {
 
 	@Override
 	public Action step() {
-		// TODO deliberate and Parameter action
-//		return ActionUtils.gotoAction();
+		// TODO deliberate and Parameter action	
+		for(Percept p : getAllPercepts())
+			handlePercept(p);
+		
 		return CityUtil.action("goto", "facility=shop1");
 	}
 

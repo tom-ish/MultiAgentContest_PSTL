@@ -4,6 +4,7 @@ import massim.javaagents.Agent;
 import massim.javaagents.agents.CityUtil;
 import apltk.interpreter.data.LogicBelief;
 import eis.iilang.Action;
+import eis.iilang.Parameter;
 import eis.iilang.Percept;
 
 public class MyAgent extends Agent {
@@ -28,7 +29,20 @@ public class MyAgent extends Agent {
 	@Override
 	public Action step() {
 		// TODO deliberate and Parameter action	
-		if(this.role == Role.Explorateur){
+		if(this.role == Role.JobSelector){
+			for(Percept percept : getAllPercepts()){
+				// On ne considère uniquement les pricedJob pour la simulation minimale
+				if(percept.getName().equalsIgnoreCase("pricedJob")){
+					Parameter itemsForJob = percept.getParameters().get(5);
+					System.out.println("========================================");
+					System.out.println(itemsForJob.toString());
+				}
+			}
+		}
+		else if(this.role == Role.Acheteur){
+			
+		}
+		else if(this.role == Role.JobDeliver){
 			
 		}
 		else if(this.role == Role.Rechargeur){

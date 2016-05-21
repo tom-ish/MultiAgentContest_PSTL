@@ -7,11 +7,17 @@ import eis.iilang.Action;
 import eis.iilang.Percept;
 
 public class MyAgent extends Agent {
+	
+	private Role role;
 
-	public MyAgent(String name, String team) {
+	public MyAgent(String name, String team, String role) {
 		super(name, team);
 		// TODO do something if necessary
+		this.role = Role.valueOf(Role.class, role);
 	}
+	
+	public void setRole(Role role){ this.role = role; }
+	public Role getRole(){ return this.role; }
 
 	@Override
 	public void handlePercept(Percept arg0) {
@@ -22,6 +28,12 @@ public class MyAgent extends Agent {
 	@Override
 	public Action step() {
 		// TODO deliberate and Parameter action	
+		if(this.role == Role.Explorateur){
+			
+		}
+		else if(this.role == Role.Rechargeur){
+			
+		}
 
 		// 1). Parcourir tous les Percepts
 		for(Percept percept : getAllPercepts()){

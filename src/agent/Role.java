@@ -11,5 +11,6 @@ public enum Role {
 	JobSelector,
 	Rechargeur,
 	Retireur,
-	Stockeur
+	Stockeur,
+	TeamManager
 }

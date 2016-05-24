@@ -72,5 +72,6 @@ public class ActionUtils extends CityUtil {
 	static public Action abortAction() {
 		return new Action("abort");
 	}
+
 	
 }

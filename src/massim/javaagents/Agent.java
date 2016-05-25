@@ -294,8 +294,7 @@ public abstract class Agent {
 			if ( ag.equals(getName())) continue;
 			if ( agentsTeams.get(ag).equals(team) == false ) continue;
 			sendMessage(belief,ag);
-		}
-		
+		}	
 	}
 	
 	/**
